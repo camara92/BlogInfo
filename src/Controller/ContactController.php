@@ -36,7 +36,7 @@ class ContactController extends AbstractController
          * donc on doit faire appeller le maillerinterface 
          * 
          */
-        if ($form->isValid() && $form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid() ) {
             //imporrt entiy pour faire le persist 
             //et du flush dans bdd 
             $entityManagerInterface->persist($contact);
