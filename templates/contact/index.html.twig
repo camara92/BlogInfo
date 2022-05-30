@@ -1,20 +1,86 @@
-<!DOCTYPE html>
+{% extends "layout/base.html.twig" %}
+{% block title %}page de contact | formulaire de contact
+{% endblock %}
 
-<title>Hello ContactController!</title>
+{% block navbar %}{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+{# formulaire  #}
+	<div class="site-section bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 mb-5">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'D:/BlogInfo/src/Controller/ContactController.php'|file_link(0) }}">src/Controller/ContactController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'D:/BlogInfo/templates/contact/index.html.twig'|file_link(0) }}">templates/contact/index.html.twig</a></code></li>
-    </ul>
-</div>
+
+					<form action="#" class="p-5 bg-white">
+
+
+						<div class="row form-group">
+							<div class="col-md-6 mb-3 mb-md-0">
+								<label class="text-black" for="fname">Prénom</label>
+								<input type="text" id="fname" class="form-control">
+							</div>
+							<div class="col-md-6">
+								<label class="text-black" for="lname">Nom </label>
+								<input type="text" id="lname" class="form-control">
+							</div>
+						</div>
+
+						<div class="row form-group">
+
+							<div class="col-md-12">
+								<label class="text-black" for="email">Email</label>
+								<input type="email" id="email" class="form-control">
+							</div>
+						</div>
+
+						<div class="row form-group">
+
+							<div class="col-md-12">
+								<label class="text-black" for="subject">Subjet</label>
+								<input type="subject" id="subject" class="form-control">
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label class="text-black" for="message">Message</label>
+								<textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Merci de saisir votre message ici..."></textarea>
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-12">
+								<input type="submit" value="Send Message" class="btn btn-primary py-2 px-4 text-white">
+							</div>
+						</div>
+
+
+					</form>
+				</div>
+				<div class="col-md-5">
+
+					<div class="p-4 mb-3 bg-white">
+                    {# on affiche les données de contact crée dans le service yam  #}
+						<p class="mb-0 font-weight-bold">Addresse</p>
+						<p class="mb-4">{{ contact_adress }}</p>
+
+						<p class="mb-0 font-weight-bold">Phone</p>
+						<p class="mb-4">
+							<a href="#">{{ contact_phone }}</a>
+						</p>
+
+						<p class="mb-0 font-weight-bold">Addresse email</p>
+						<p class="mb-0">
+							<a href="#">{{ contact_email }}</a>
+						</p>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}
+{% block footer %}{% endblock %}
