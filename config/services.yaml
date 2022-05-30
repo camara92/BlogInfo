@@ -6,8 +6,8 @@
 parameters:
     app.contact.email: 'daoudasouleymanecamara8@gmail.com'
     app.contact.subject: 'contact form | message'
-    app.contact.adress: '22 Route du Rhin 67400 Illkirch, France'
-    app.contact.phone: '0767438283'
+    app.contact.adress: '22 Route du Rhin 67400 Illkirch || France'
+    app.contact.phone: '👉 0767438283'
 
 services:
     # default configuration for services in *this* file
