@@ -123,7 +123,8 @@ class ResetPasswordController extends AbstractController
 
             // The session is cleaned up after the password has been changed.
             $this->cleanSessionAfterReset();
-
+            //si la reinitialisation est ok redirect vers 
+            // return $this->redirectToRoute('app_home');
             return $this->redirectToRoute('app_home');
         }
 
