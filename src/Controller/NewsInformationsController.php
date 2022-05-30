@@ -30,6 +30,9 @@ class NewsInformationsController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $newsInformation->setcreatedAt(new \DateTime());
+            //$newsInformation->setUpdatedAt(new \DateTime()); 
+
             $newsInformationsRepository->add($newsInformation, true);
 
             return $this->redirectToRoute('app_news_informations_index', [], Response::HTTP_SEE_OTHER);

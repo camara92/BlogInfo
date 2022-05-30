@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\NewsInformations;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class NewsInformationsType extends AbstractType
@@ -14,9 +15,12 @@ class NewsInformationsType extends AbstractType
         $builder
             ->add('title')
             ->add('description')
-            ->add('imageName')
-            ->add('createdAt')
-            ->add('updatedAt')
+            //remplacer image ImageName par File 
+
+            ->add('imageFile', VichImageType::class)
+            //  ->add('createdAt')
+            //  ->add('updatedAt')
+            //voir controller car setdate 
         ;
     }
 
