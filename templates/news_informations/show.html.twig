@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<title>NewsInformations</title>
+
+{% block body %}
+    <h1>NewsInformations</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ news_information.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ news_information.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ news_information.description }}</td>
+            </tr>
+            <tr>
+                <th>ImageName</th>
+                <td>{{ news_information.imageName }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ news_information.createdAt ? news_information.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ news_information.updatedAt ? news_information.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_news_informations_index') }}">back to list</a>
+
+    <a href="{{ path('app_news_informations_edit', {'id': news_information.id}) }}">edit</a>
+
+    {{ include('news_informations/_delete_form.html.twig') }}
+{% endblock %}

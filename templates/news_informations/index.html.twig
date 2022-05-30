@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<title>NewsInformations index</title>
+
+{% block body %}
+    <h1>NewsInformations index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>ImageName</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for news_information in news_informations %}
+            <tr>
+                <td>{{ news_information.id }}</td>
+                <td>{{ news_information.title }}</td>
+                <td>{{ news_information.description }}</td>
+                <td>{{ news_information.imageName }}</td>
+                <td>{{ news_information.createdAt ? news_information.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ news_information.updatedAt ? news_information.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_news_informations_show', {'id': news_information.id}) }}">show</a>
+                    <a href="{{ path('app_news_informations_edit', {'id': news_information.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_news_informations_new') }}">Create new</a>
+{% endblock %}
