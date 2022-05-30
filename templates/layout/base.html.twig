@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Atlas
+			{% endblock %}
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link href="https://fonts.googleapis.com/css?family=Muli:300,400,700|Playfair+Display:400,700,900" rel="stylesheet">
+
+		<link rel="stylesheet" href="{{ asset('assets/fonts/icomoon/style.css')}}">
+		<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css')}}">
+		<link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/bootstrap-datepicker.css') }}">
+		<link rel="stylesheet" href=" {{  asset('assets/fonts/flaticon/font/flaticon.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/aos.css')}}">
+
+		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</head>
+	<body>
+<div class="site-wrap">
+
+{% block navbar %}
+{% include "layout/partials/header.html.twig" %}
+{% endblock %}
+		{% block body %}{% endblock %}
+        {% block footer %}
+{% include "layout/partials/footer.html.twig" %}
+{% endblock %}
+
+</div>
+		<script src="{{ asset ('assets/js/jquery-3.3.1.min.js') }}"></script>
+		<script src="{{ asset('assets/js/jquery-migrate-3.0.1.min.js') }}"></script>
+		<script src="{{ asset('assets/js/jquery-ui.js')}}"></script>
+		<script src="{{ asset('assets/js/popper.min.js ')}}"></script>
+		<script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
+		<script src="{{ asset('assets/js/owl.carousel.min.js')}}"></script>
+		<script src="{{ asset('assets/js/jquery.stellar.min.js')}}"></script>
+		<script src="{{ asset('assets/js/jquery.countdown.min.js')}}"></script>
+		<script src="{{ asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
+		<script src="{{ asset('assets/js/bootstrap-datepicker.min.js')}}"></script>
+		<script src="{{ asset('js/main.js')}} "></script> 
+
+
+
+
+
