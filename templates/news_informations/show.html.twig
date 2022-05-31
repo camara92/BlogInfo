@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-
-<title>NewsInformations</title>
+{% extends "layout/base.html.twig" %}
 
 {% block body %}
-    <h1>NewsInformations</h1>
+<br><br>
+<div class="container my-5">
+    <h1>Nouvelles informations </h1>
 
     <table class="table">
         <tbody>
@@ -39,4 +39,5 @@
     <a href="{{ path('app_news_informations_edit', {'id': news_information.id}) }}">edit</a>
 
     {{ include('news_informations/_delete_form.html.twig') }}
+    </div>
 {% endblock %}

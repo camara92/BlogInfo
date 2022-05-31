@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Repository\NewsInformationsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -12,7 +13,7 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'app_home')]
-    public function index(EntityManagerInterface $entityManagerInterface, UserPasswordHasherInterface $userPasswordHasherInterface): Response
+    public function index(EntityManagerInterface $entityManagerInterface, UserPasswordHasherInterface $userPasswordHasherInterface, NewsInformationsRepository $newsInformationsRepository): Response
     {   
         
         //methode de inscription dun user 
@@ -30,6 +31,7 @@ class HomeController extends AbstractController
         
         return $this->render('home/index.html.twig', [
             'controller_name' => 'Daouda ❤️❤️❤️',
+            'news'=>$newsInformationsRepository->findAll()
         ]);
     }
 }
