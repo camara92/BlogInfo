@@ -20,18 +20,21 @@
           </div>
 
           <div class="col-4 site-logo ">
-            <a href="index.html" class="text-black h2 mb-0 ">Atlas❤️</a>
+            <a href="{{path('app_home') }}" class="text-black h2 mb-0 ">Atlas❤️</a>
           </div>
 
           <div class="col-8 text-right">
             <nav class="site-navigation text-white shadow" role="navigation">
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
-                <li><a href="category.html">Home</a></li>
-                <li><a href="category.html">Politics</a></li>
-                <li><a href="category.html">Tech</a></li>
-                <li><a href="category.html">Entertainment</a></li>
-                <li><a href="category.html">Travel</a></li>
-                <li><a href="category.html">Sports</a></li>
+                <li><a href="{{path('app_home') }}">Accueil</a></li>
+                <li><a href="category.html">News </a></li>
+                <li><a href="category.html">Infolocales</a></li>
+                <li><a href="category.html">Actualités </a></li>
+                <li><a href="category.html">Sport</a></li>
+                <li><a href="category.html">Cultures </a></li>
+                <li><a href="#">Adhérer  </a></li>
+                <li><a href="{{path('app_register') }}">Inscription </a></li>
+                <li><a href="{{path('app_login') }}">Connexion </a></li>
                 <li class="d-none d-lg-inline-block"><a href="#" class="js-search-toggle"><span class="icon-search"></span></a></li>
               </ul>
             </nav>
