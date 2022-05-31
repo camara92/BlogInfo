@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-
-<title>NewsInformations index</title>
+{% extends "layout/base.html.twig" %}
 
 {% block body %}
-    <h1>NewsInformations index</h1>
+<div class="container my-5">
+<br><br><br><br>
+    <h1 class="container text-white text-center bg-dark bold shadow" >Informations </h1>
 
     <table class="table">
         <thead>
@@ -22,7 +22,7 @@
             <tr>
                 <td>{{ news_information.id }}</td>
                 <td>{{ news_information.title }}</td>
-                <td>{{ news_information.description }}</td>
+                <td>{{ news_information.description | slice(0,40)  }}</td>
                 <td>{{ news_information.imageName }}</td>
                 <td>{{ news_information.createdAt ? news_information.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ news_information.updatedAt ? news_information.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
@@ -39,5 +39,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_news_informations_new') }}">Create new</a>
+    <a class="btn btn-success btn-block" href="{{ path('app_news_informations_new') }}">Créer</a>
+
+    </div>
 {% endblock %}
