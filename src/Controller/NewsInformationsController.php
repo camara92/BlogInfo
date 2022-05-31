@@ -31,7 +31,7 @@ class NewsInformationsController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $newsInformation->setcreatedAt(new \DateTime());
-            //$newsInformation->setUpdatedAt(new \DateTime()); 
+            $newsInformation->setUpdatedAt(new \DateTime()); 
 
             $newsInformationsRepository->add($newsInformation, true);
 
