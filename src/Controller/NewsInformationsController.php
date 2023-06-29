@@ -31,7 +31,7 @@ class NewsInformationsController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $newsInformation->setcreatedAt(new \DateTime());
-            $newsInformation->setUpdatedAt(new \DateTime()); 
+            $newsInformation->setUpdatedAt(new \DateTime());
 
             $newsInformationsRepository->add($newsInformation, true);
 
@@ -73,7 +73,7 @@ class NewsInformationsController extends AbstractController
     #[Route('/{id}', name: 'app_news_informations_delete', methods: ['POST'])]
     public function delete(Request $request, NewsInformations $newsInformation, NewsInformationsRepository $newsInformationsRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$newsInformation->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $newsInformation->getId(), $request->request->get('_token'))) {
             $newsInformationsRepository->remove($newsInformation, true);
         }
 

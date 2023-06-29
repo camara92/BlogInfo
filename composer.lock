@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c17d920f4b7b05d551da41c75e04fa0",
+    "content-hash": "f61521ee97e2677308fad00e24e3ec1e",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -5642,16 +5642,16 @@
         },
         {
             "name": "symfony/runtime",
-            "version": "v6.1.0",
+            "version": "v6.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/runtime.git",
-                "reference": "4d5b0f1444cc7c95dbe48190f64f84a21d160133"
+                "reference": "717cb91d66893a27a4607f227e28eb74ff007fde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/runtime/zipball/4d5b0f1444cc7c95dbe48190f64f84a21d160133",
-                "reference": "4d5b0f1444cc7c95dbe48190f64f84a21d160133",
+                "url": "https://api.github.com/repos/symfony/runtime/zipball/717cb91d66893a27a4607f227e28eb74ff007fde",
+                "reference": "717cb91d66893a27a4607f227e28eb74ff007fde",
                 "shasum": ""
             },
             "require": {
@@ -5698,7 +5698,7 @@
             "description": "Enables decoupling PHP applications from global state",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/runtime/tree/v6.1.0"
+                "source": "https://github.com/symfony/runtime/tree/v6.1.11"
             },
             "funding": [
                 {
@@ -5714,7 +5714,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-12T16:22:53+00:00"
+            "time": "2023-01-20T17:44:30+00:00"
         },
         {
             "name": "symfony/security-bundle",
